@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>speed converter</title>
+    <style>
+body {
+background-image: url(cfpic.jpg);
+background-size:1450px;
+width:300px;
+height:300px;
+border:2pxsolid;
+}
+
+#container6{
+    width: 540%;
+    margin: auto;
+    overflow: hidden;
+
+    margin-top: 30px;
+
+}
+
+#container6 ul{
+    padding: 0px;
+    margin: 0px;
+}
+
+
+#container6 ul li{
+    float:left;
+    list-style: none;
+    width:65%;
+    height:275px;
+    background: white;
+    margin :20px 20px 20px 55px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .2), 0 8px 16px rgba(0, 0, 0, .8);
+    box-sizing: border-box;
+    cursor:pointer;
+    border-radius: 2pxsolid;
+      text-align:center;
+}
+#container6 ul li:hover{
+    opacity: 0.8;
+}
+
+#container6 ul li .bottom{
+    width: 100%;
+    height:50px;
+    line-height: 50px;
+
+    text-align: center;
+    color:black;
+    font-size: 50px;
+
+}</style>
+<script type="text/javascript">
+  function speedConverter1(valNum) {
+    document.getElementById("outputKPH").innerHTML=valNum*1.609344;
+  }
+  function speedConverter2(valNum) {
+  document.getElementById("outputMPH").innerHTML=valNum/1.609344;
+}
+function speedConverter3(valNum) {
+  document.getElementById("outputKnots").innerHTML=valNum/1.852;
+}
+function speedConverter4(valNum) {
+  document.getElementById("outputKnots1").innerHTML=valNum/1.150779;
+}
+</script>
+<link rel="stylesheet" href="cod css.css">
+  </head>
+  <body>
+
+    <div class="container">
+        <div class="topnav">
+            <a href="Untitled-1.html">Home</a>
+            <a href="wei.html">Weight</a>
+            <a href="len.html">Length</a>
+            <a href="Hei.html">Height</a>
+            <a href="tem.html">Temperature</a>
+            <a class="active" href="sp.html">Speed</a>
+          </div>
+        </div>
+    <div id="container6">
+        <ul>
+
+            <li> <div class="bottom">MPH to KPH</div><p>
+  <label>MPH</label>
+  <input id="inputMPH" type="number" placeholder="MPH" oninput="speedConverter1(this.value)" onchange="speedConverter1(this.value)">
+</p>
+<p>KPH: <span id="outputKPH"></span></p></li>
+            <li> <div class="bottom">KPH to MPH</div><p>
+  <label>KPH</label>
+  <input id="inputKPH" type="number" placeholder="KPH" oninput="speedConverter2(this.value)" onchange="speedConverter2(this.value)">
+</p>
+<p>MPH: <span id="outputMPH"></span></p>
+</li>
+            <li> <div class="bottom">KPH to knots</div><p>
+  <label>KPH</label>
+  <input id="inputKPH" type="number" placeholder="KPH" oninput="speedConverter3(this.value)" onchange="speedConverter3(this.value)">
+</p>
+<p>Knots: <span id="outputKnots"></span></p></li>
+            <li> <div class="bottom">MPH to knots</div><p>
+  <label>MPH</label>
+  <input id="inputMPH" type="number" placeholder="MPH" oninput="speedConverter4(this.value)" onchange="speedConverter4(this.value)">
+</p>
+<p>Knots: <span id="outputKnots1"></span></p></li>
+      </ul>
+     
+  </body>
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>temperature converter</title>
+    <style>
+body {
+background-image: url(cfpic.jpg);
+background-size:1450px;
+width:300px;
+height:300px;
+border:2pxsolid;
+}
+
+#container5{
+    width: 540%;
+    margin: auto;
+    overflow: hidden;
+
+    margin-top: 30px;
+
+}
+
+#container5 ul{
+    padding: 0px;
+    margin: 0px;
+}
+
+
+#container5 ul li{
+    float:left;
+    list-style: none;
+    width:65%;
+    height:275px;
+    background: white;
+    margin :20px 20px 20px 55px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .2), 0 8px 16px rgba(0, 0, 0, .8);
+    box-sizing: border-box;
+    cursor:pointer;
+    border-radius: 2pxsolid;
+      text-align:center;
+}
+#container5 ul li:hover{
+    opacity: 0.8;
+}
+
+#container5 ul li .bottom{
+    width: 100%;
+    height:50px;
+    line-height: 50px;
+
+    text-align: center;
+    color:black;
+    font-size: 50px;
+
+}</style>
+<script type="text/javascript">
+  function temperatureConverter1(valNum) {
+    valNum = parseFloat(valNum);
+    document.getElementById("outputCelcius").innerHTML=valNum-273.15;
+  }
+  function temperatureConverter2(valNum) {
+  valNum = parseFloat(valNum);
+  document.getElementById("outputKelvin").innerHTML=valNum+273.15;
+}
+function temperatureConverter3(valNum) {
+  valNum = parseFloat(valNum);
+  document.getElementById("outputFahrenheit").innerHTML=((valNum-273.15)*1.8)+32;
+}
+function temperatureConverter4(valNum) {
+  valNum = parseFloat(valNum);
+  document.getElementById("outputKelvin1").innerHTML=((valNum-32)/1.8)+273.15;
+}
+function temperatureConverter5(valNum) {
+  valNum = parseFloat(valNum);
+  document.getElementById("outputFahrenheit1").innerHTML=(valNum*1.8)+32;
+}
+function temperatureConverter6(valNum) {
+  valNum = parseFloat(valNum);
+  document.getElementById("outputCelcius1").innerHTML=(valNum-32)/1.8;
+}
+</script>
+<link rel="stylesheet" href="cod css.css">
+  </head>
+
+  <body>
+
+    <div class="container">
+        <div class="topnav">
+            <a href="Untitled-1.html">Home</a>
+            <a href="wei.html">Weight</a>
+            <a href="len.html">Length</a>
+            <a href="Hei.html">Height</a>
+            <a class="active" href="tem.html">Temperature</a>
+            <a href="sp.html">Speed</a>
+          </div>
+        </div>
+    
+    <div id="container5">
+        <ul>
+
+            <li> <div class="bottom">kelvin to celsius</div><p>
+  <label>Kelvin</label>
+  <input id="inputKelvin" type="number" placeholder="Kelvin" oninput="temperatureConverter1(this.value)" onchange="temperatureConverter1(this.value)">
+</p>
+<p>Celcius: <span id="outputCelcius"></span></p></li>
+            <li> <div class="bottom">celsius to kelvin</div><p>
+  <label>Celsius</label>
+  <input id="inputCelsius" type="number" placeholder="Celsius" oninput="temperatureConverter2(this.value)" onchange="temperatureConverter2(this.value)">
+</p>
+<p>Kelvin: <span id="outputKelvin"></span></p></li>
+            <li> <div class="bottom">kelvin to fahrenheit</div><p>
+  <label>Kelvin</label>
+  <input id="inputKelvin" type="number" placeholder="Kelvin" oninput="temperatureConverter3(this.value)" onchange="temperatureConverter3(this.value)">
+</p>
+<p>Fahrenheit: <span id="outputFahrenheit"></span></p></li>
+            <li> <div class="bottom">fahrenheit to kelvin</div><p>
+  <label>Fahrenheit</label>
+  <input id="inputFahrenheit" type="number" placeholder="Fahrenheit" oninput="temperatureConverter4(this.value)" onchange="temperatureConverter4(this.value)">
+</p>
+<p>Kelvin: <span id="outputKelvin1"></span></p></li>
+            <li> <div class="bottom">celsius to fahrenheit</div>
+<p>
+  <label>Celsius</label>
+  <input id="inputCelsius" type="number" placeholder="Celsius" oninput="temperatureConverter5(this.value)" onchange="temperatureConverter5(this.value)">
+</p>
+<p>Fahrenheit: <span id="outputFahrenheit1"></span></p></li>
+            <li> <div class="bottom">fahrenheit to celsius</div><p>
+  <label>Fahrenheit</label>
+  <input id="inputFahrenheit" type="number" placeholder="Fahrenheit" oninput="temperatureConverter6(this.value)" onchange="temperatureConverter6(this.value)">
+</p>
+<p>Celcius: <span id="outputCelcius1"></span></p></li>
+        </ul>
+        
+
+  </body>
+</html>

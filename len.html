@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>length converters</title>
+    <style>
+body {
+background-image: url(cfpic.jpg);
+background-size:1450px;
+width:300px;
+height:300px;
+border:2pxsolid;
+}
+#container3{
+    width: 540%;
+    margin: auto;
+    overflow: hidden;
+
+    margin-top: 30px;
+
+}
+
+#container3 ul{
+    padding: 0px;
+    margin: 0px;
+}
+
+
+#container3 ul li{
+    float:left;
+    list-style: none;
+    width:65%;
+    height:300px;
+    background: white;
+    margin :20px 0px 20px 55px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .2), 0 8px 16px rgba(0, 0, 0, .8);
+    box-sizing: border-box;
+    cursor:pointer;
+    border-radius: 2pxsolid;
+      text-align:center;
+}
+#container3 ul li:hover{
+    opacity: 0.8;
+}
+
+#container3 ul li .bottom{
+    width: 100%;
+    height:50px;
+    line-height: 50px;
+
+    text-align: center;
+    color:black;
+    font-size: 50px;
+
+}</style>
+<script type="text/javascript">
+  function LengthConverter1(valNum) {
+    document.getElementById("outputMeters").innerHTML=valNum/39.370;
+  }
+  function LengthConverter2(valNum) {
+  document.getElementById("outputInches").innerHTML=valNum*39.370;
+}
+function LengthConverter3(valNum) {
+  document.getElementById("outputYards").innerHTML=valNum*0.027778;
+}
+function LengthConverter4(valNum) {
+  document.getElementById("outputInches").innerHTML=valNum*36;
+}
+function LengthConverter5(valNum) {
+  document.getElementById("outputYards").innerHTML=valNum*1.0936;
+}
+</script>
+<link rel="stylesheet" href="cod css.css">
+  </head>
+  <body>
+
+    <div class="container">
+        <div class="topnav">
+            <a href="Untitled-1.html">Home</a>
+            <a href="wei.html">Weight</a>
+            <a class="active" href="len.html">Length</a>
+            <a href="Hei.html">Height</a>
+            <a href="tem.html">Temperature</a>
+            <a href="sp.html">Speed</a>
+          </div>
+        </div>
+
+    <div id="container3">
+        <ul>
+
+            <li> <div class="bottom">inches to m</div><p>
+  <label>Inches</label>
+  <input id="inputInches" type="number" placeholder="Inches" oninput="LengthConverter1(this.value)" onchange="LengthConverter1(this.value)">
+</p>
+<p>Meters: <span id="outputMeters"></span></p></li>
+            <li> <div class="bottom">m to inches</div><p>
+  <label>Meters</label>
+  <input id="inputMeters" type="number" placeholder="Meters" oninput="LengthConverter2(this.value)" onchange="LengthConverter2(this.value)">
+</p>
+<p>Inches: <span id="outputInches"></span></p></li>
+            <li> <div class="bottom">inches to yard</div><p>
+  <label>Inches</label>
+  <input id="inputInches" type="number" placeholder="Inches" oninput="LengthConverter3(this.value)" onchange="LengthConverter3(this.value)">
+</p>
+<p>Yards: <span id="outputYards"></span></p></li>
+            <li> <div class="bottom">yard to inches</div><p>
+  <label>Yards</label>
+  <input id="inputYards" type="number" placeholder="Yards" oninput="LengthConverter4(this.value)" onchange="LengthConverter4(this.value)">
+</p>
+<p>Inches: <span id="outputInches"></span></p></li>
+            <li> <div class="bottom">m to yard</div><p>
+  <label>Meters</label>
+  <input id="inputMeters" type="number" placeholder="Meters" oninput="LengthConverter5(this.value)" onchange="LengthConverter5(this.value)">
+</p>
+<p>Yards: <span id="outputYards"></span></p></li>
+            <li> <div class="bottom">yard to m</div><p>
+  <label>Yards</label>
+  <input id="inputYards" type="number" placeholder="Yards" oninput="LengthConverter6(this.value)" onchange="LengthConverter6(this.value)">
+</p>
+<p>Meters: <span id="outputMeters"></span></p></li>
+</ul>
+
+  </body>
+</html>

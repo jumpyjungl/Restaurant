@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>height converters</title>
+    <style>
+body {
+background-image: url(cfpic.jpg);
+background-size:1450px;
+width:300px;
+height:300px;
+border:2pxsolid;
+}
+
+#container4{
+    width: 540%;
+    margin: auto;
+    overflow: hidden;
+
+    margin-top: 30px;
+
+}
+
+#container4 ul{
+    padding: 0px;
+    margin: 0px;
+}
+
+
+#container4 ul li{
+    float:left;
+    list-style: none;
+    width:65%;
+    height:275px;
+    background: white;
+    margin :20px 20px 20px 55px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .2), 0 8px 16px rgba(0, 0, 0, .8);
+    box-sizing: border-box;
+    cursor:pointer;
+    border-radius: 2pxsolid;
+      text-align:center;
+}
+#container4 ul li:hover{
+    opacity: 0.8;
+}
+
+#container4 ul li .bottom{
+    width: 100%;
+    height:50px;
+    line-height: 50px;
+
+    text-align: center;
+    color:black;
+    font-size: 50px;
+
+}</style>
+<script type="text/javascript">
+  function LengthConverter11(valNum) {
+    document.getElementById("outputcm").innerHTML=valNum/0.39370;
+  }
+  function LengthConverter12(valNum) {
+  document.getElementById("outputInches").innerHTML=valNum*0.39370;
+}
+function LengthConverter13(valNum) {
+  document.getElementById("outputFeet").innerHTML=valNum*0.083333;
+}
+function LengthConverter14(valNum) {
+  document.getElementById("outputInches1").innerHTML=valNum*12;
+}
+</script>
+<link rel="stylesheet" href="cod css.css">
+  </head>
+  <body>
+
+    <div class="container">
+        <div class="topnav">
+            <a href="Untitled-1.html">Home</a>
+            <a href="wei.html">Weight</a>
+            <a href="len.html">Length</a>
+            <a class="active" href="Hei.html">Height</a>
+            <a href="tem.html">Temperature</a>
+            <a href="sp.html">Speed</a>
+          </div>
+        </div>
+
+    <div id="container4">
+        <ul>
+
+            <li> <div class="bottom">inches to cm</div><p>
+  <label>Inches</label>
+  <input id="inputInches" type="number" placeholder="Inches" oninput="LengthConverter11(this.value)" onchange="LengthConverter11(this.value)">
+</p>
+<p>cm: <span id="outputcm"></span></p></li>
+            <li> <div class="bottom">cm to inches</div><p>
+  <label>cm</label>
+  <input id="inputcm" type="number" placeholder="cm" oninput="LengthConverter12(this.value)" onchange="LengthConverter12(this.value)">
+</p>
+<p>Inches: <span id="outputInches"></span></p></li>
+            <li> <div class="bottom">inches to feet</div><p>
+  <label>Inches</label>
+  <input id="inputInches" type="number" placeholder="Inches" oninput="LengthConverter13(this.value)" onchange="LengthConverter13(this.value)">
+</p>
+<p>Feet: <span id="outputFeet"></span></p></li>
+            <li> <div class="bottom">feet to inches</div><p>
+  <label>Feet</label>
+  <input id="inputFeet" type="number" placeholder="Feet" oninput="LengthConverter14(this.value)" onchange="LengthConverter14(this.value)">
+</p>
+<p>Inches: <span id="outputInches1"></span></p></li>
+        </ul>
+
+  </body>
+</html>

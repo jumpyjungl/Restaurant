@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>weight converter</title>
+    <style>
+        
+body {
+background-image: url(cfpic.jpg);
+background-size:1450px;
+width:300px;
+height:300px;
+border:2pxsolid;
+}
+
+#container2{
+    width: 540%;
+    margin: auto;
+    overflow: hidden;
+
+    margin-top: 30px;
+
+}
+
+#container2 ul{
+    padding: 0px;
+    margin: 0px;
+}
+
+
+#container2 ul li{
+    float:left;
+    list-style: none;
+    width:65%;
+    height:275px;
+    background: white;
+    margin :20px 20px 20px 55px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .2), 0 8px 16px rgba(0, 0, 0, .8);
+    box-sizing: border-box;
+    cursor:pointer;
+    border-radius: 2pxsolid;
+    text-align:center;
+
+}
+#container2 ul li:hover{
+    opacity: 0.8;
+}
+
+#container2 ul li .bottom{
+    width: 100%;
+    height:50px;
+    line-height: 50px;
+
+    text-align: center;
+    color:black;
+    font-size: 50px;
+
+
+}</style>
+
+    <script type="text/javascript">
+    function weightConverter1(valNum) {
+    document.getElementById("outputKilograms").innerHTML=valNum/2.2046;
+  }
+    function weightConverter2(valNum) {
+  document.getElementById("outputPounds").innerHTML=valNum*2.2046;
+}function weightConverter3(valNum) {
+  document.getElementById("outputGrams").innerHTML=valNum*1000;
+}
+function weightConverter4(valNum) {
+  document.getElementById("outputKilograms1").innerHTML=valNum/1000;
+}
+    </script>
+     <link rel="stylesheet" href="cod css.css">
+  </head>
+  <body>
+    <div class="container">
+    <div class="topnav">
+        <a href="Untitled-1.html">Home</a>
+        <a class="active" href="wei.html">Weight</a>
+        <a href="len.html">Length</a>
+        <a href="Hei.html">Height</a>
+        <a href="tem.html">Temperature</a>
+        <a href="sp.html">Speed</a>
+      </div>
+    </div>
+
+    <div id="container2">
+        <ul>
+
+            <li> <div class="bottom">pounds to kg</div>
+              <p>
+    <label>Pounds</label>
+    <input id="inputPounds" type="number" placeholder="Pounds" oninput="weightConverter1(this.value)" onchange="weightConverter1(this.value)">
+  </p>
+  <p>Kilograms: <span id="outputKilograms"></span></p>
+            <li> <div class="bottom">kg to pounds</div><p>
+              <label>Kilograms</label>
+              <input id="inputKilograms" type="number" placeholder="Kilograms" oninput="weightConverter2(this.value)" onchange="weightConverter2(this.value)">
+</p>
+<p>Pounds: <span id="outputPounds"></span></p></li>
+
+<li><div class="bottom">kilograms to grams</div><p>
+  <label>Kilograms</label>
+  <input id="inputKilograms" type="number" placeholder="Kilograms" oninput="weightConverter3(this.value)" onchange="weightConverter3(this.value)">
+</p>
+<p>Grams: <span id="outputGrams"></span></p></li>
+<li><div class="bottom">grams to kilograms</div><p>
+  <label>Grams</label>
+  <input id="inputGrams" type="number" placeholder="Grams" oninput="weightConverter4(this.value)" onchange="weightConverter4(this.value)">
+</p>
+<p>Kilograms: <span id="outputKilograms1"></span></p></li>
+</ul>
+
+
+  </body>
+</html>
